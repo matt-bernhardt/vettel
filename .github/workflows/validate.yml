@@ -24,4 +24,4 @@ jobs:
       run: ./vendor/bin/phpcs --config-set installed_paths ${{env.WPCS_PATH}}
 
     - name: Check code against WordPress standards
-      run: ./vendor/bin/phpcs -psvn . --standard=./codesniffer.mitlib.xml --extensions=php
+      run: ./vendor/bin/phpcs -psvn . --standard=./codesniffer.security.xml --extensions=php
