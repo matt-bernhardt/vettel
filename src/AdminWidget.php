@@ -8,11 +8,17 @@
 
 namespace Mjbernha\Vettel;
 
+/**
+ * Implements an administrative widget.
+ */
 class AdminWidget {
 	const WID = 'vettel';
 
 	const PERMS = 'manage_options';
 
+	/**
+	 * Initializes the widget, provided permissions check out.
+	 */
 	public static function init() {
 
 		// Define the dashboard widget.
@@ -25,6 +31,9 @@ class AdminWidget {
 		}
 	}
 
+	/**
+	 * Calls the widget template, provided permissions check out.
+	 */
 	public static function widget() {
 
 		// Check user capabilities.
