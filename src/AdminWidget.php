@@ -8,18 +8,22 @@
 
 namespace Mjbernha\Vettel;
 
+/**
+ * Implements an administrative widget.
+ */
 class AdminWidget {
 	const WID = 'vettel';
 
 	const PERMS = 'manage_options';
 
+	/**
+	 * Initializes the widget, provided permissions check out.
+	 */
 	public static function init() {
-		error_log( 'This is in init' );
 
 		// Define the dashboard widget.
 		if ( current_user_can( self::PERMS ) ) {
-			error_log( 'We passed the permissions check' );
-			\wp_add_dashboard_widget(
+			wp_add_dashboard_widget(
 				self::WID, // A unique slug/ID.
 				'Sebastian Vettel Appreciation', // Visible name for the widget.
 				array( 'Mjbernha\Vettel\AdminWidget', 'widget' )  // Callback for the main widget content.
@@ -27,6 +31,9 @@ class AdminWidget {
 		}
 	}
 
+	/**
+	 * Calls the widget template, provided permissions check out.
+	 */
 	public static function widget() {
 
 		// Check user capabilities.
