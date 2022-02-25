@@ -8,6 +8,9 @@
 
 namespace Mjbernha\Vettel;
 
+/**
+ * Implements a public-facing widget for use in the UI.
+ */
 class DisplayWidget extends \WP_Widget {
 
 	/**

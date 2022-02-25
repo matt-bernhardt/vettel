@@ -29,6 +29,9 @@
         ],
         "mess": [
             "phpmd ./src text phpmd.xml --suffixes php"
+        ],
+        "post-install-cmd": [
+            "composer dumpautoload -o"
         ]
     }
 }
